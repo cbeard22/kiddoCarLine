@@ -3,9 +3,9 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type User {
         _id: ID
-        parentOne: String
+        isParent: Boolean
+        isAdmin: Boolean
         parentTwo: String
-        car: String
     }
 
     type Student {
@@ -18,6 +18,11 @@ const typeDefs = gql`
         user: [User]
         students(_id: String): [Student]
     }
+
+    type Mutation {
+        createLocation(student: String!, tech2: String!): Location
+        createStudent(_id: String!, techNum: Int!): Student
+      }
 `
 
 module.exports = typeDefs;

@@ -9,16 +9,14 @@ const resolvers = {
             return userData
         }
     },
-    /*
-        Mutation: {
-            createUser: async (parent, args) => {
-                const newUser = await User.create(args);
-                const token = signToken(newUser)
-    
-                return { token, user }
-            }
+    Mutation: {
+        createUser: async (user, args) => {
+            const newUser = await User.create(args);
+            const token = signToken(newUser)
+
+            return { token, user }
         }
-        */
+    }
 }
 
-module.exports = resolvers
+module.exports = resolvers;

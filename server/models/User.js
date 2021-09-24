@@ -17,12 +17,12 @@ const userSchema = new Schema({
     default: true,
   },
   isAdmin: {
-    type: String,
+    type: Boolean,
     required: true,
     trim: true,
   },
   parentTwo: {
-    type: Number,
+    type: String,
     required: false,
     trim: true,
   },

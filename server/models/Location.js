@@ -9,7 +9,6 @@ const locationSchema = new Schema({
     type: String,
     required: true,
   },
-  
 });
 
 const Location = model('Location', locationSchema);

@@ -1,4 +1,5 @@
 const User = require('./User');
+const Student = require('./Student');
 const Location = require('./Location');
 
-module.exports = { User, Matchup };
+module.exports = { User, Student, Location };

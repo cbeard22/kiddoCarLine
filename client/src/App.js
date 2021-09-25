@@ -13,11 +13,11 @@ class App extends Component {
   render() {
     return(
       <div className="App">
-        <Admin studentData={studentData}/>
+        {/* <Admin studentData={studentData}/>
         <Home studentData={studentData}/>
         <Login studentData={studentData}/>
         <Navbar studentData={studentData}/>
-        <Signup studentData={studentData}/>
+        <Signup studentData={studentData}/> */}
       </div>
     )
   }

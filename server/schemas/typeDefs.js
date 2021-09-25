@@ -20,9 +20,9 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        createLocation(student: String!, tech2: String!): Location
-        createStudent(_id: String!, techNum: Int!): Student
-      }
+        createLocation(student: String!, tech2: String!): User
+        createStudent(_id: String!, techNum: Int!): User
+    }
 `
 
 module.exports = typeDefs;

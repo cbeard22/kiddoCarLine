@@ -4,9 +4,8 @@ import { useMutation } from '@apollo/client';
 import {LOGIN_ADMIN} from '../utils/mutations'
 
 import Auth from '../utils/auth'
-import { Admin } from 'mongodb';
 
-const login = (props) => {
+const LoginAuth = (props) => {
     const [formState, setFormState] = useState({email:'', password:''});
     const [login, {error, data}] = useMutation(LOGIN_ADMIN);
 
@@ -91,7 +90,7 @@ const handleFormSubmit = async (event) => {
   );
 };
 
-export default Admin;
+export default LoginAuth;
 
 
 

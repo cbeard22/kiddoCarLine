@@ -4,7 +4,7 @@ export default class Navbar extends Component {
 
 
     render() {
-        let studentData = this.props.studentData;
+        /* let studentData = this.props.studentData; */
         return (
             <React.Fragment>
                 <header id="home">
@@ -12,7 +12,7 @@ export default class Navbar extends Component {
                         <ul className="nav">
                             <li className="current"><a href="#Home">Home</a></li>
                             <li><a href="#Admin">#Admin</a></li>
-                            <li><a href="#Login">#Login</a></li>
+                            <li><a href="#ParentLogin">#ParentLogin</a></li>
                             <li><a href="#Signup">#Signup</a></li>
 
                         </ul>

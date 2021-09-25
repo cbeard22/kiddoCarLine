@@ -2,22 +2,22 @@
 import './App.css';
 
 import React, {Component} from "react";
-import Admin from "./components/Admin";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Navbar from "./components/Navbar";
-import Signup from "./components/Signup";
+import Admin from "./pages/Admin";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Navbar from "./pages/Navbar";
+import Signup from "./pages/Signup";
 
 
 class App extends Component {
   render() {
     return(
       <div className="App">
-        <Admin studentData={studentData}/>
-        <Home studentData={studentData}/>
-        <Login studentData={studentData}/>
-        <Navbar studentData={studentData}/>
-        <Signup studentData={studentData}/>
+        <Admin/>
+        <Home/>
+        <Login/>
+        <Navbar/>
+        <Signup/>
       </div>
     )
   }

@@ -20,6 +20,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
+        login(email: String!, password: String!): Auth,
         createLocation(student: String!, tech2: String!): Location
         createStudent(_id: String!, techNum: Int!): Student
       }

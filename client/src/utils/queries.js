@@ -4,10 +4,14 @@ export const GET_STUDENTS = gql `
     query {
         students {
             _id
-            student
+            email
+            password
             parent {
                 parentOne
                 parentTwo
+            }
+            student {
+                userID
             }
         }
     }

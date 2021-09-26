@@ -11,13 +11,22 @@ export const LOGIN_USER = gql`
             }
         }
     }
-
-
-
-
 `;
 
-export const ADD_STUDENT = gql`
+export const LOGIN_ADMIN = gql`
+    mutation login($email: String!, $password: String!) {
+        login(email: $email, password: $password) {
+            token {
+                user{
+                    email
+                    password
+                }
+            }
+        }
+    }
+
+`;
+export const ADD_USER = gql`
     mutation createStudent($_id: String!, $techNum: Int!){
         createStudent(_id: $_id, techNum: $techNum) {
             token

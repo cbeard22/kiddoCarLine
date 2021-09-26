@@ -1,0 +1,38 @@
+[
+    {
+        "row": 1,
+        "position": 1,
+        "ishere": true,
+        "userid": 3
+    },
+    {
+        "row": 1,
+        "position": 2,
+        "ishere": true,
+        "userid": 4
+    },
+    {
+        "row": 1,
+        "position": 3,
+        "ishere": true,
+        "userid": 6
+    },
+    {
+        "row": 1,
+        "position": 4,
+        "ishere": true,
+        "userid": 5
+    },
+    {
+        "row": 2,
+        "position": 1,
+        "ishere": true,
+        "userid": 7
+    },
+    {
+        "row": 2,
+        "position": 2,
+        "ishere": true,
+        "userid": 2
+    }
+]

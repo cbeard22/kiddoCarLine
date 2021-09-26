@@ -3,25 +3,28 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type User {
         _id: ID
+        username: String
         isParent: Boolean
         isAdmin: Boolean
         parentTwo: String
+        student: String
     }
 
-    type Student {
+    type Location {
         _id: ID
-        student: String
-        parentID: ID
+        row: Int
+        position: Int
+        ishere: Boolean
+        userid: Int
     }
 
     type Query {
         user: [User]
-        students(_id: String): [Student]
+        location(_id: String): [Location]
     }
 
     type Mutation {
-        createLocation(student: String!, tech2: String!): User
-        createStudent(_id: String!, techNum: Int!): User
+        createLocation(student: String!, username: String!): User
     }
 `
 

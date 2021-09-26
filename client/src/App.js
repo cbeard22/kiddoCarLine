@@ -1,57 +1,54 @@
-// import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
 
-import React, {Component} from "react";
-import Admin from "./pages/Admin";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Navbar from "./pages/Navbar";
-import Signup from "./pages/Signup";
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
+import Signup from './components/SignupForm';
+import ParentLogin from './components/ParentLoginForm';
+import Navbar from './components/Navbar';
+import AdminLogin from './components/AdminLoginForm';
 
-class App extends Component {
-  render() {
-    return(
-      <div className="App">
-        {/* <Admin studentData={studentData}/>
-        <Home studentData={studentData}/>
-        <Login studentData={studentData}/>
-        <Navbar studentData={studentData}/>
-        <Signup studentData={studentData}/> */}
-      </div>
-    )
-  }
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+function App() {
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <>
+          <Navbar />
+          <Switch>
+            <Route exact path='/ParentLoginForm' component={ParentLogin} />
+            <Route exact path='/SignupForm' component={Signup} />
+            <Route exact path='/AdminLoginForm' component={AdminLogin} />
+            <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
+          </Switch>
+        </>
+      </Router>
+    </ApolloProvider>
+  );
 }
 
-
-
 export default App;
-
-
-
-
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-

@@ -9,14 +9,15 @@ const locationSchema = new Schema({
         type: Number,
         required: true,
     },
-    parent: {
-        type: String,
+    ishere: {
+        type: Boolean,
         required: true,
+        default: true,
     },
-    student: {
-        type: String,
+    userid: {
+        type: Number,
         required: true,
-    },
+    }
 });
 
 const Location = model('Location', locationSchema);

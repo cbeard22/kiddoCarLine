@@ -26,6 +26,12 @@ const userSchema = new Schema({
     required: false,
     trim: true,
   },
+  student: [
+    {
+    type: String,
+    trim: true,
+    },
+  ],
 });
 
 const User = model('User', userSchema);

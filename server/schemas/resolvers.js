@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Location } = require("../models");
 const { signToken } = require("../utils/auth");
 
 

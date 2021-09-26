@@ -19,12 +19,13 @@ const typeDefs = gql`
     }
 
     type Query {
-        user: [User]
-        location(_id: String): [Location]
+        user: [User]!
+        location(userid: ID!): [Location]
     }
 
     type Mutation {
-        createLocation(student: String!, username: String!): User
+        createUser(username: String!, password: String!): User
+        createLocation(userid: ID!): Location
     }
 `
 

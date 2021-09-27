@@ -1,22 +1,21 @@
-import React from 'react';
-/* import { useQuery } from '@apollo/client'; */
+import React, { Component } from 'react';
+import { Grid, Cell } from 'react-mdl';
 
-const Home = () => {
-  
-  return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-        
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-        </div>
+
+class Home extends Component {
+  render() {
+    return (
+      <div style={{ width: '100', margin: '20px' }}>
+        <Grid className="home-grid">
+          <Cell col={12}>
+
+            <div className="banner-text">
+              <h1> Kiddo Car Line </h1>
+            </div>
+          </Cell>
+        </Grid>
       </div>
-    </main>
-  );
-};
-
+    )
+  }
+}
 export default Home;

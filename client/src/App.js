@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import Main from './pages/main'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,10 +12,11 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import Signup from './components/SignupForm';
-import ParentLogin from './components/ParentLoginForm';
-import Navbar from './components/Navbar';
-import AdminLogin from './components/AdminLoginForm';
+import Home from './pages/Home';
+import Signup from './pages/SignupForm';
+import ParentLogin from './pages/ParentLoginForm';
+import Header from './components/Header';
+import AdminLogin from './pages/AdminLoginForm';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,15 +41,25 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
-          <Navbar />
-          <Switch>
-            <Route exact path='/ParentLoginForm' component={ParentLogin} />
-            <Route exact path='/SignupForm' component={Signup} />
-            <Route exact path='/AdminLoginForm' component={AdminLogin} />
-            <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
-          </Switch>
-        </>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="flex-column justify-flex-start min-100-vh">
+            <div className="container">
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/ParentLoginForm">
+                <ParentLogin />
+              </Route>
+              <Route exact path="/SignupForm">
+                <Signup />
+              </Route>
+              <Route exact path="/AdminLoginForm">
+                <AdminLogin />
+              </Route>
+            </div>
+          </div>
+        </div>
       </Router>
     </ApolloProvider>
   );

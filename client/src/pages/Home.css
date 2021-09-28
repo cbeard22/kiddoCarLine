@@ -1,0 +1,24 @@
+
+.card-body{
+    size: 400px;
+  }
+  .comp-name {
+    display:flex;
+    margin: auto;
+  }
+  
+  .what{
+    padding-top: 40px;
+    display:flex;
+    justify-content:center;
+    color:black;
+    font-size: 28px;
+    margin: auto;
+  }
+
+  .list{
+      font-size: 25px;
+      padding-top: 20px;
+      display:flex;
+      justify-content: space-evenly;
+  }

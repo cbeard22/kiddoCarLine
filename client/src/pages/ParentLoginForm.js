@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import qrCode from './QrCode';
+
+//when a user is logged in qr code is rendered
+//if else (promise(logged in valid) and a conditional(render qrcode) inside that promise)
 
 const ParentLoginForm = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -48,8 +50,8 @@ const ParentLoginForm = (props) => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                Success! Here is your{' '}
+                <Link to="/ParentLoggedIn">QR Code</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>

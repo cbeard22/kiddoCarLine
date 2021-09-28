@@ -3,14 +3,13 @@ import gql from 'graphql-tag';
 export const LOGIN_USER = gql`
     mutation login($email: String!, $password: String!) {
         login(email: $email, password: $password) {
-            token {
-                user{
-                    email
-                    password
-                }
-            }
+            token 
+            user{
+                _id
+                username
         }
     }
+}
 `;
 
 export const LOGIN_ADMIN = gql`
@@ -18,44 +17,23 @@ export const LOGIN_ADMIN = gql`
         login(email: $email, password: $password) {
             token {
                 user{
-                    email
-                    password
+                    _id
+                    username
                 }
             }
         }
     }
 
 `;
+
 export const ADD_USER = gql`
-    mutation createStudent($_id: String!, $techNum: Int!){
-        createStudent(_id: $_id, techNum: $techNum) {
-            token
-            user {
-                _id
-                techNum
-            }
-        }
+mutation addUser($username: String!, $email: String!, $password: String!){
+    addUser(username:$username, email:$email, password:$password){
+      token
+      user{
+          _id
+        username
+      }
     }
-
-
-
-
+  }
 `;
-
-export const CREATE_LOCATION = gql`
-    mutation createLocation($student: String! $tech2: String!){
-        createLocation(student: $student, tech2: $tech2){
-            token
-            location{
-                student
-                tech2
-            }
-        }
-    }
-
-
-
-`;
-
-
-

@@ -1,17 +1,14 @@
 import { gql } from '@apollo/client';
 
-export const GET_STUDENTS = gql `
-    query {
-        students {
-            _id
-            email
-            password
-            parent {
-                parentOne
-                parentTwo
-            }
-            student {
-                userID
+export const QUERY_PARENT = gql`
+query {
+    me {
+        _id
+        username
+        email
+        password
+        parent {
+                studentLastName
             }
         }
     }

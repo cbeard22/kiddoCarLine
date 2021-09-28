@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import '../Header/Navbar.css'
 import Auth from '../../utils/auth';
+import { wrap } from 'module';
+import { Dropdown } from 'react-bootstrap';
 
 const Header = () => {
   const logout = (event) => {
@@ -10,7 +13,18 @@ const Header = () => {
   };
   return (
     <header className="navbar">
-      <Link className="home" to="/">
+      <Dropdown>
+      <Dropdown.Toggle
+      
+      
+     
+     id='dropdown-basic'>
+       Navigation
+      
+      </Dropdown.Toggle>
+
+    <Dropdown.Menu>
+     <Link className="home" to="/">
         Home
       </Link>
       <Link className="parentlogin" to="/ParentLoginForm">
@@ -22,7 +36,15 @@ const Header = () => {
       <Link className="adminlogin" to="/AdminLoginForm">
         Admin Login
       </Link>
+
+      </Dropdown.Menu>
+
+      </Dropdown>
+      
     </header>
+
+    
+    
   );
 };
 

@@ -1,6 +1,7 @@
 
 .card-body{
     size: 400px;
+    
   }
   .comp-name {
     display:flex;
@@ -21,4 +22,8 @@
       padding-top: 20px;
       display:flex;
       justify-content: space-evenly;
+      
+
   }
+
+  

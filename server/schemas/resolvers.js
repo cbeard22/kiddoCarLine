@@ -1,16 +1,19 @@
-const { User, Location } = require("../models");
+const { User, Location, Student } = require("../models");
 const { signToken } = require("../utils/auth");
 
 
 const resolvers = {
     Query: {
-        user: async () => {
-            const userData = await User.find({});
+        users: async () => {
+            const userData = await User.find({}).populate('students');
             return userData;
         },
-        location: async () => {
-            const locationData = await Location.find({ishere: true})
+        locations: async () => {
+            const locationData = await Location.find({ishere: true}).populate('users');
             return locationData;
+        },
+        students: async () => {
+            const studentData = await Student.find({}).populate('users');
         }
     },
     Mutation: {

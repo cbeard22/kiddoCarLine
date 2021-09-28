@@ -14,9 +14,9 @@ const locationSchema = new Schema({
         required: true,
         default: true,
     },
-    userid: {
-        type: Number,
-        required: true,
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     }
 });
 

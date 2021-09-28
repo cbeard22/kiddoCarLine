@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Form, Button, Card } from 'react-bootstrap';
+import './SignupForm.css';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -42,33 +44,33 @@ const SignupForm = () => {
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
-        <div className="card">
+        <Card className="card col-md-6">
           <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+          <Card.Body className="card-body">
             {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
+              <Form onSubmit={handleFormSubmit}>
+                <Form.Control
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
                 />
-                <input
+                <Form.Control
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
+                <Form.Control
                   className="form-input"
                   placeholder="******"
                   name="password"
@@ -76,22 +78,22 @@ const SignupForm = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <input
+                <Form.Control
                   className="form-input"
-                  placeholder="students last name"
+                  placeholder="student last name"
                   name="studentsName"
                   type="text"
                   value={formState.studentsName}
                   onChange={handleChange}
                 />
-                <button
+                <Button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
-                </button>
-              </form>
+                </Button>
+              </Form>
             )}
 
             {error && (
@@ -99,8 +101,8 @@ const SignupForm = () => {
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
+          </Card.Body>
+        </Card>
       </div>
     </main>
   );

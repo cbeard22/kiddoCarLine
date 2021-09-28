@@ -9,7 +9,13 @@ const userSchema = new Schema({
     type: String,
     trim: true,
     required: "Password is Required",
-    validate: [({ length }) => length >= 6, "Password should be longer."]
+    validate: [({ length }) => length >= 4, "Password should be longer."]
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   isParent: {
     type: Boolean,
@@ -28,10 +34,10 @@ const userSchema = new Schema({
   },
   student: [
     {
-    type: String,
-    trim: true,
-    },
-  ],
+      type: Schema.Types.ObjectId,
+      ref: 'Student'
+    }
+  ]
 });
 
 const User = model('User', userSchema);

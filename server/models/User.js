@@ -12,7 +12,10 @@ const userSchema = new Schema({
     validate: [({ length }) => length >= 4, "Password should be longer."]
   },
   email: {
-
+    type: String,
+    required: true,
+    unique: true,
+    match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   isParent: {
     type: Boolean,

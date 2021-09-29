@@ -4,79 +4,27 @@
         "password": "Chris1",
         "isParent": false,
         "isAdmin": true,
-        "parentTwo": "",
-        "student": [
-            ""
-        ]
-    },
-    {
-        "username": "Jeff",
-        "password": "Jeff1",
-        "isParent": true,
-        "isAdmin": false,
-        "parentTwo": "Isabella",
-        "student": [
-            "Christopher"
-        ]
-    },
-    {
-        "username": "Daniel",
-        "password": "Daniel1",
-        "isParent": true,
-        "isAdmin": false,
-        "parentTwo": "",
-        "student": [
-            "Kid One"
-        ]
-    },
-    {
-        "username": "Mike",
-        "password": "Mike",
-        "isParent": true,
-        "isAdmin": false,
-        "parentTwo": "",
-        "student": [
-            "Mike","Michael","Michaela","Micha"
-        ]
-    },
-    {
-        "username": "Derek",
-        "password": "Derek1",
-        "isParent": true,
-        "isAdmin": false,
-        "parentTwo": "",
-        "student": [
-            "Son of Derek"
-        ]
+        "parentTwo": ""
     },
     {
         "username": "Jane Doe",
         "password": "Jane1",
         "isParent": true,
         "isAdmin": false,
-        "parentTwo": "John Doe",
-        "student": [
-            "Kido Doe", "Doe Doe"
-        ]
+        "parentTwo": "John Doe"
     },
     {
         "username": "Lois Griffin",
         "password": "Lois1",
         "isParent": true,
         "isAdmin": false,
-        "parentTwo": "Peter Griffin",
-        "student": [
-            "Chris Griffin", "Meg Griffin", "Stewie Griffin"
-        ]
+        "parentTwo": "Peter Griffin"
     },
     {
         "username": "Stan Smith",
         "password": "Stan1",
         "isParent": true,
         "isAdmin": false,
-        "parentTwo": "Francine Smith",
-        "student": [
-            "Steve Smith", "Hayley Smith"
-        ]
+        "parentTwo": "Francine Smith"
     }
 ]

@@ -2,7 +2,7 @@
     background-color: ;
 } */
 
-.card {
+/* .card {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,8 +12,7 @@
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: -3px 3px gray;
-    /* background-color: white; */
-}
+} */
 
 h4 {
     font-size: 25px;

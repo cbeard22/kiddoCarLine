@@ -26,7 +26,7 @@
     {
         "username": "Stan Smith",
         "password": "Stan1",
-        "email": "lois@familyguy.com",
+        "email": "stansmith@americandad.com",
         "isParent": true,
         "isAdmin": false,
         "parentTwo": "Francine Smith"

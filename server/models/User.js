@@ -25,7 +25,7 @@ const userSchema = new Schema({
   isAdmin: {
     type: Boolean,
     required: true,
-    trim: true,
+    default: false,
   },
   parentTwo: {
     type: String,

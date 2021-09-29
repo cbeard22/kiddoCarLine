@@ -2,7 +2,7 @@
     {
         "username": "Chris",
         "password": "Chris1",
-        "email:": "chris@gmail.com",
+        "email": "chris@gmail.com",
         "isParent": false,
         "isAdmin": true,
         "parentTwo": ""
@@ -10,7 +10,7 @@
     {
         "username": "Jane Doe",
         "password": "Jane1",
-        "email:": "janedoe@gmail.com",
+        "email": "janedoe@gmail.com",
         "isParent": true,
         "isAdmin": false,
         "parentTwo": "John Doe"
@@ -18,7 +18,7 @@
     {
         "username": "Lois Griffin",
         "password": "Lois1",
-        "email:": "lois@familyguy.com",
+        "email": "lois@familyguy.com",
         "isParent": true,
         "isAdmin": false,
         "parentTwo": "Peter Griffin"
@@ -26,7 +26,7 @@
     {
         "username": "Stan Smith",
         "password": "Stan1",
-        "email:": "lois@familyguy.com",
+        "email": "lois@familyguy.com",
         "isParent": true,
         "isAdmin": false,
         "parentTwo": "Francine Smith"

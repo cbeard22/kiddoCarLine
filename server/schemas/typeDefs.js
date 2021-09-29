@@ -25,6 +25,11 @@ const typeDefs = gql`
         student: String
     }
 
+    type Auth {
+        token: ID!
+        user: User
+      }
+
     type Query {
         users: [User]
         students: [Student]
@@ -33,6 +38,7 @@ const typeDefs = gql`
 
     type Mutation {
         createUser(username: String!, password: String! ): User
+        login(email: String!, password: String!): Auth
         createLocation(_id: ID!): Location
     }
 `

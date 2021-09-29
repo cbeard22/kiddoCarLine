@@ -59,7 +59,7 @@ const SignupForm = () => {
                   placeholder="username"
                   name="username"
                   type="text"
-                  value={formState.name}
+                  value={formState.username}
                   onChange={handleChange}
                 />
                 <Form.Control

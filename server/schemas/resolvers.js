@@ -9,7 +9,7 @@ const resolvers = {
             return userData;
         },
         locations: async () => {
-            const locationData = await Location.find({ishere: true}).populate('users');
+            const locationData = await Location.find({ ishere: true }).populate('users');
             return locationData;
         },
         students: async () => {
@@ -17,6 +17,23 @@ const resolvers = {
         }
     },
     Mutation: {
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+
+            if (!user) {
+                throw new AuthenticationError('No user found with this email address');
+            }
+
+            const correctPw = await user.isCorrectPassword(password);
+
+            if (!correctPw) {
+                throw new AuthenticationError('Incorrect credentials');
+            }
+
+            const token = signToken(user);
+
+            return { token, user };
+        },
         createUser: async (user, args) => {
             const newUser = await User.create(args);
             const token = signToken(newUser);

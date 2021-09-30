@@ -5,7 +5,7 @@ const { typeDefs, resolvers } = require('./schemas');
 const { authMiddleware } = require('./utils/auth');
 const db = require('./config/connection');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 const server = new ApolloServer({
@@ -17,7 +17,6 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-/* server.start().then(res => { */
 server.applyMiddleware({ app });
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import qrCode from './QrCode';
+//import qrCode from './QrCode';
 import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
 const ParentLoginForm = (props) => {

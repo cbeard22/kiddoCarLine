@@ -11,6 +11,7 @@ import {
 
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { onError } from 'apollo-link-error'
 
 import Home from './pages/Home';
 import Signup from './pages/SignupForm';
@@ -35,6 +36,10 @@ const authLink = setContext((_, { headers }) => {
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
+  onError: ({ networkError, graphQLErrors }) => {
+    console.log('graphQLErrors', graphQLErrors)
+    console.log('networkError', networkError)
+  }
 });
 
 function App() {

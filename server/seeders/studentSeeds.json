@@ -1,0 +1,26 @@
+[
+    {
+        "parent": "Lois Griffin",
+        "student": "Meg Griffin"
+    },
+    {
+        "parent": "Lois Griffin",
+        "student": "Chris Griffin"
+    },
+    {
+        "parent": "Lois Griffin",
+        "student": "Stewart Griffin"
+    },
+    {
+        "parent": "Stan Smith",
+        "student": "Hayley Smith"
+    },
+    {
+        "parent": "Stan Smith",
+        "student": "Steve Smith"
+    },
+    {
+        "parent": "Jane Doe",
+        "student": "Ugly Kid Doe"
+    }
+]

@@ -1,4 +1,5 @@
-const { User, Location, Student } = require("../models");
+const { User, Location } = require("../models");
+const Student = require('../models/Student');
 const { signToken } = require("../utils/auth");
 
 
@@ -18,21 +19,25 @@ const resolvers = {
     },
     Mutation: {
         login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+            try {
+                const user = await User.findOne({ email });
 
-            if (!user) {
-                throw new AuthenticationError('No user found with this email address');
+                if (!user) {
+                    throw new AuthenticationError('No user found with this email address');
+                }
+
+                const correctPw = await user.isCorrectPassword(password);
+
+                if (!correctPw) {
+                    throw new AuthenticationError('Incorrect credentials');
+                }
+
+                const token = signToken(user);
+
+                return { token, user };
+            } catch(e) {
+                console.log(e);
             }
-
-            const correctPw = await user.isCorrectPassword(password);
-
-            if (!correctPw) {
-                throw new AuthenticationError('Incorrect credentials');
-            }
-
-            const token = signToken(user);
-
-            return { token, user };
         },
         createUser: async (user, args) => {
             const newUser = await User.create(args);

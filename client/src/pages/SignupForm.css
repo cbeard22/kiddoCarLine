@@ -2,36 +2,24 @@
     background-color: ;
 } */
 
-/* .card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    width: 25%;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: -3px 3px gray;
-} */
+.card {
+    box-shadow: -1px 1px black;
+}
 
 h4 {
     font-size: 25px;
 }
 
 .card-body {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     text-align: center;
-    padding: 10px 15px;
-}
+} 
 
-.form-input {
+/* .form-input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px;
-}
+} */
 
 .btn {
     margin-top: 25px;

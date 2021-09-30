@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
 
@@ -42,18 +43,22 @@ const AdminLoginForm = (props) => {
 
   return (
     <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
+      <Container>
+        <Row>
+      <Col className="d-flex justify-content-center">
+        <Card className="card col-md-6">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+          <Card.Body className="card-body">
             {data ? (
               <p>
                 Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
+              <Form onSubmit={handleFormSubmit}>
+                <Form.Group>
+                  <Form.Label>Email</Form.Label>
+                <Form.Control
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -61,7 +66,11 @@ const AdminLoginForm = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
+                </Form.Group>
+                <FormGroup>
+                  <Form.Label>Password</Form.Label>
+              
+                <Form.Control
                   className="form-input"
                   placeholder="******"
                   name="password"
@@ -69,6 +78,7 @@ const AdminLoginForm = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                </FormGroup>
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
@@ -76,7 +86,7 @@ const AdminLoginForm = (props) => {
                 >
                   Submit
                 </button>
-              </form>
+              </Form>
             )}
 
             {error && (
@@ -84,9 +94,12 @@ const AdminLoginForm = (props) => {
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
-      </div>
+            </Card.Body>
+          </Card>
+        </Col>
+      
+      </Row>
+      </Container>
     </main>
   );
 };

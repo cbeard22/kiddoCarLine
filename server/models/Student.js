@@ -6,6 +6,10 @@ const studentSchema = new Schema(
             type: String,
             required: true,
         },
+        parent: {
+            type: String,
+            required: true,
+        },
         user: {
             type: Schema.Types.ObjectId,
             ref: 'User'

@@ -1,34 +1,34 @@
 [
     {
-        "username": "Chris",
-        "password": "Chris1",
         "email": "chris@gmail.com",
+        "password": "Chris1",
         "isParent": false,
         "isAdmin": true,
+        "parentOne": "Chris",
         "parentTwo": ""
     },
     {
-        "username": "Jane Doe",
-        "password": "Jane1",
         "email": "janedoe@gmail.com",
+        "password": "Jane1",
         "isParent": true,
         "isAdmin": false,
+        "parentOne": "Jane Doe",
         "parentTwo": "John Doe"
     },
     {
-        "username": "Lois Griffin",
-        "password": "Lois1",
         "email": "lois@familyguy.com",
+        "password": "Lois1",
         "isParent": true,
         "isAdmin": false,
+        "parentOne": "Lois Griffin",
         "parentTwo": "Peter Griffin"
     },
     {
-        "username": "Stan Smith",
-        "password": "Stan1",
         "email": "stansmith@americandad.com",
+        "password": "Stan1",
         "isParent": true,
         "isAdmin": false,
+        "parentOne": "Stan Smith",
         "parentTwo": "Francine Smith"
     }
 ]

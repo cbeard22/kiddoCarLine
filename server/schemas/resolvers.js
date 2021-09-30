@@ -1,4 +1,5 @@
-const { User, Location, Student } = require("../models");
+const { User, Location } = require("../models");
+const Student = require('../models/Student');
 const { signToken } = require("../utils/auth");
 
 

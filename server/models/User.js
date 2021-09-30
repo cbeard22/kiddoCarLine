@@ -2,10 +2,6 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-  },
   password: {
     type: String,
     trim: true,
@@ -28,12 +24,17 @@ const userSchema = new Schema({
     required: true,
     default: false,
   },
+  parentOne: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   parentTwo: {
     type: String,
     required: false,
     trim: true,
   },
-  student: [
+  students: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Student'

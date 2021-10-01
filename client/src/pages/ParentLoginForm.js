@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
 const ParentLoginForm = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '', password: '', isAdmin: false });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes

@@ -22,26 +22,27 @@ const typeDefs = gql`
 
     type Student {
         _id: ID!
-        parentOne: String
+        parent: String
         student: String
     }
 
     type Auth {
         token: ID!
         user: User
-      }
+    }
 
     type Query {
         users: [User]
         username(parentOne: String!): User
         students: [Student]
-        locations: [Location]
+        locations(ishere: Boolean!): [Location]
     }
 
     type Mutation {
-        createUser(email: String!, password: String! ): User
-        login(email: String!, password: String!): Auth
+        createUser(parentOne: String!, email: String!, password: String!, student: String): Auth
+        login(email: String!, password: String!, isAdmin: Boolean!): Auth
         createLocation(_id: ID!): Location
+        addStudent(student: String!): Student
     }
 `
 

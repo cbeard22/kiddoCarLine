@@ -1,6 +1,9 @@
+/* body {
+  background-color: white !important;
+} */
+
 .card-body{
     size: 400px;
-    
   }
 
   .comp-name {
@@ -32,11 +35,13 @@
   .list-group-item {
     margin-bottom: 20px;
     border: none;
+    background-color: black !important;
   }
 
   .logo {
     display: block;
     margin: 0;
     padding: 0;
-    height: 450px;
+    height: 600px;
+    width: 1250px;
   }

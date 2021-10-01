@@ -3,7 +3,7 @@ import { Grid, Cell } from 'react-mdl';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
-import img from './images/logo.png';
+import img from './images/image.png';
 
 class Home extends Component {
   render() {
@@ -22,7 +22,7 @@ class Home extends Component {
                 </div>
               </Cell>
               <Cell col={6}>
-                <h3 className='what m-3'> What would you like to do?</h3>
+                <h3 className='what m-3' style={{ color: 'white'}}> What would you like to do?</h3>
                 <ListGroup className="list">
                   <ListGroupItem><Link to='/SignupForm'> Create an Account</Link></ListGroupItem>
                   <ListGroupItem><Link to='/ParentLoginForm'> Login</Link></ListGroupItem>

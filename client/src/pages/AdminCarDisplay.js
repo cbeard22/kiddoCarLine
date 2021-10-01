@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table';
 
-class CarLine extends Component {
+class AdminCarDisplay extends Component {
     render() {
         return (
             <div>
@@ -55,4 +55,4 @@ class CarLine extends Component {
     }
 }
 
-export default CarLine;
+export default AdminCarDisplay;

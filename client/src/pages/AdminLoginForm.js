@@ -51,8 +51,7 @@ const AdminLoginForm = (props) => {
           <Card.Body className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/AdminCarDisplay">You can now view the cars.</Link>
               </p>
             ) : (
               <Form onSubmit={handleFormSubmit}>

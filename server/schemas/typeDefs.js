@@ -41,7 +41,7 @@ const typeDefs = gql`
     type Mutation {
         createUser(parentOne: String!, email: String!, password: String!, student: String): Auth
         login(email: String!, password: String!, isAdmin: Boolean!): Auth
-        createLocation(_id: ID!): Location
+        createLocation(row: Int!, position: Int!): Location
         addStudent(student: String!): Student
     }
 `

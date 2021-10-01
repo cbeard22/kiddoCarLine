@@ -29,12 +29,11 @@ const ParentLoginForm = (props) => {
         variables: { ...formState },
       });
 
-      console.log(data);
+      //console.log(data);
       Auth.login(data.login.token);
       
 
     } catch (e) {
-      console.log("THIS ERROR J-HERE");
       console.error(e);
     }
 

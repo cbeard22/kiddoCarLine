@@ -19,6 +19,7 @@ import ParentLogin from './pages/ParentLoginForm';
 import Header from './components/Header';
 import AdminLogin from './pages/AdminLoginForm';
 import Position from './pages/Position';
+import AdminCarDisplay from './pages/AdminCarDisplay';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -62,6 +63,9 @@ function App() {
               </Route>
               <Route exact path="/AdminLoginForm">
                 <AdminLogin />
+              </Route>
+              <Route exact path="/AdminCarDisplay">
+                <AdminCarDisplay />
               </Route>
               <Route exact path="/Position">
                 <Position />

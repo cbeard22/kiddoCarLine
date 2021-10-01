@@ -12,9 +12,6 @@ const resolvers = {
         locations: async () => {
             const locationData = await Location.find({ ishere: true }).populate('users');
             return locationData;
-        },
-        students: async () => {
-            const studentData = await Student.find({}).populate('users');
         }
     },
     Mutation: {

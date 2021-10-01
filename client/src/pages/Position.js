@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import { DropdownButton, Dropdown, Button } from 'react-bootstrap';
+import { DropdownButton, Dropdown, Button, Container } from 'react-bootstrap';
+
+
 
 //This page defines the position the cars are in after parent logs in.
 
@@ -9,8 +11,9 @@ import { DropdownButton, Dropdown, Button } from 'react-bootstrap';
 class Position extends Component {
     render() {
         return (
+            <Container className="d-flex justify-content-center">
             <div className='location'>
-                <h1>Where are you located in the car rider line?</h1>
+                <h1 style={{color:"white"}}>Where are you located in the car rider line?</h1>
                 <div className='location-row'>
                     <DropdownButton id="dropdown-basic-button" title="What Row are you in?">
                         <Dropdown.Item href="">Row 1</Dropdown.Item>
@@ -33,6 +36,7 @@ class Position extends Component {
                     </Button>{' '}
                 </div>
             </div>
+            </Container>
         )
     }
 }

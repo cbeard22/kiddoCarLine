@@ -29,8 +29,12 @@ const ParentLoginForm = (props) => {
         variables: { ...formState },
       });
 
+      console.log(data);
       Auth.login(data.login.token);
+      
+
     } catch (e) {
+      console.log("THIS ERROR J-HERE");
       console.error(e);
     }
 
@@ -41,6 +45,7 @@ const ParentLoginForm = (props) => {
     });
   };
 
+
   return (
     <main className="flex-row justify-center mb-4">
       <Container>
@@ -49,10 +54,9 @@ const ParentLoginForm = (props) => {
         <Card className="card col-md-6">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <Card.Body className="card-body">
-            {data ? (
+            {Auth.loggedIn() ? (
               <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="./Position">Click to the check-in page.</Link>
               </p>
             ) : (
               <Form onSubmit={handleFormSubmit}>

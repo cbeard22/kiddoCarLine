@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
 import img from './images/logo.png';
 
+
 class Home extends Component {
   render() {
     return (
@@ -16,7 +17,7 @@ class Home extends Component {
               <Cell col={6}>
 
                 <div className="banner-text">
-                  <img class='logo' src={img} alt='logo'>
+                  <img className='logo' src={img} alt='logo'>
 
                   </img>
                 </div>

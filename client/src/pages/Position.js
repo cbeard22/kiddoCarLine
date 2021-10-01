@@ -4,6 +4,8 @@ import { DropdownButton, Dropdown, Button } from 'react-bootstrap';
 
 //This page defines the position the cars are in after parent logs in.
 
+//console.log(data);
+
 class Position extends Component {
     render() {
         return (

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
-import Auth from '../utils/auth';
 
 const AdminLoginForm = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '', password: '', isAdmin: true });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes

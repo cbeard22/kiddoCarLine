@@ -1,6 +1,6 @@
-/* body {
-    background-color: ;
-} */
+body {
+    background-color: black;
+}
 
 .card {
     box-shadow: -1px 1px black;
@@ -13,6 +13,10 @@ h4 {
 .card-body {
     text-align: center;
 } 
+
+.card-header {
+    background-color: blue !important;
+}
 
 /* .form-input {
     display: flex;

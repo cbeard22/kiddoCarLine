@@ -1,31 +1,24 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .card {
-    box-shadow: -1px 1px black;
+  box-shadow: -1px 1px black;
 }
 
 h4 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .card-body {
-    text-align: center;
-} 
-
-.card-header {
-    background-color: blue !important;
+  text-align: center;
 }
 
-/* .form-input {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-} */
+.card-header {
+  background-color: blue !important;
+}
 
 .btn {
-    margin-top: 25px;
-    margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }

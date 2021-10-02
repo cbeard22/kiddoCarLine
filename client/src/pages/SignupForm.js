@@ -13,7 +13,7 @@ const SignupForm = () => {
     username: '',
     email: '',
     password: '',
-    studentsName:'',
+    studentsName: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 

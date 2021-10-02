@@ -40,7 +40,7 @@ Kiddo Car Line is a web application that allows parent to inform the school when
 To utilize this page, simply create an account on the sign up page. Then login and select that you are here to pick up your child. Your childs name will then be loaded into the car rider line administration page where the teachers can display or dismiss students to go to the car rider line. Once the cars are full the admin can then clear the car rider lines and they can begin to enter new names. 
 
 ![Home Screen](./images/screenshot1.jpg "KiddoCarLine")
-![Login Page](./images/screenshot2.jpg "KiddoCarLine)
+![Login Page](./images/screenshot2.jpg "KiddoCarLine")
 
 ## Credits
 - Collaborators

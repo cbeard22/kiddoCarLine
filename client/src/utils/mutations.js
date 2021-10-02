@@ -33,19 +33,12 @@ export const ADD_USER = gql`
 `;
 
 export const CREATE_LOCATION = gql`
-    mutation createLocation($parentOne: String!, $row: String!, $position: String!){
-        createLocation(parentOne: $parentOne, row: $row, position: $position){
+    mutation createLocation($row: Int!, $position: Int!, $userID: String!){
+        createLocation(row: $row, position: $position, userID: $userID){
             _id
             row
             position
-            user {
-                email
-                parentOne
-                parentTwo
-                students {
-                    student
-                }
-            }
+            userID
         }
     }
 

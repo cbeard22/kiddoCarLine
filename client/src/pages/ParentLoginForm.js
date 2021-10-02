@@ -7,7 +7,6 @@ import Auth from '../utils/auth';
 import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
 const userID = localStorage.getItem('id_user');
-
 console.log(userID);
 
 const ParentLoginForm = (props) => {
@@ -36,7 +35,6 @@ const ParentLoginForm = (props) => {
       //console.log(data);
       //console.log(data.login.user._id);
       Auth.login(data.login.token, data.login.user._id);
-      
 
     } catch (e) {
       console.error(e);
@@ -60,7 +58,7 @@ const ParentLoginForm = (props) => {
           <Card.Body className="card-body">
             {Auth.loggedIn() ? (
               <p>
-                <Link to="./Position">I am here for my child!</Link>
+                <Link to="./Position">I am here for my child! --- PLF</Link>
               </p>
             ) : (
               <Form onSubmit={handleFormSubmit}>

@@ -17,7 +17,7 @@ const typeDefs = gql`
         row: Int!
         position: Int!
         ishere: Boolean
-        users: [User]
+        userID: String!
     }
 
     type Student {
@@ -41,7 +41,7 @@ const typeDefs = gql`
     type Mutation {
         createUser(parentOne: String!, email: String!, password: String!, student: String): Auth
         login(email: String!, password: String!, isAdmin: Boolean!): Auth
-        createLocation(row: Int!, position: Int!): Location
+        createLocation(row: Int, position: Int, userID: String!): Location
         addStudent(student: String!): Student
     }
 `

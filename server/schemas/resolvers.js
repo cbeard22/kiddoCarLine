@@ -54,9 +54,9 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        createLocation: async (user, args) => {
-            const newLocation = await Location.create(args);
-            return { newLocation, user }
+        createLocation: async (parent, { row, position, userID }, context) => {
+            const newLocation = await Location.create({ row, position, userID });
+            return newLocation;
         },
         addStudent: async (parent, { student }, context) => {
             if (context.user) {

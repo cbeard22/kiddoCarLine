@@ -3,6 +3,8 @@ import { useMutation } from '@apollo/client';
 import { CREATE_LOCATION } from '../utils/mutations';
 import { Container, Col, Card} from 'react-bootstrap';
 
+import { Container, DropdownButton, Dropdown, Col, Card } from 'react-bootstrap';
+
 const userID = localStorage.getItem('id_user');
 
 const Position = (props) => {
@@ -23,16 +25,34 @@ const Position = (props) => {
 
     return (
         <main className="flex-row justify-center mb-4">
-        <Container>
-        <Col className="d-flex justify-content-center">
-            <Card style ={{backgroundColor:'black'}}>
-            <h1 style={{color:'white'}}>I am here for my child!</h1>
-                <button className="btn btn-block btn-primary" style={{ cursor: 'pointer' }} onClick={locationSubmit}>
-                Click To Confirm
-              </button>
-              </Card>
-        </Col>
-        </Container>
+            <Container>
+                <Col className="d-flex justify-content-center">
+                    <Card style={{ backgroundColor: 'black' }}>
+                    </Card>
+                    <Card style={{ backgroundColor: 'black' }}>
+                        <h1 style={{ color: 'white' }}>I am here for my child!</h1>
+                        <div className='location-row'>
+                            <DropdownButton id="dropdown-basic-button" title="What Row are you in?">
+                                <Dropdown.Item href="">Row 1</Dropdown.Item>
+                                <Dropdown.Item href="">Row 2</Dropdown.Item>
+                            </DropdownButton>
+                        </div>
+                        <div className='location-position'>
+                            <DropdownButton id="dropdown-basic-button" title="What position are you in?">
+                                <Dropdown.Item href="">Car 1</Dropdown.Item>
+                                <Dropdown.Item href="">Car 2</Dropdown.Item>
+                                <Dropdown.Item href="">Car 3</Dropdown.Item>
+                                <Dropdown.Item href="">Car 4</Dropdown.Item>
+                                <Dropdown.Item href="#">Car 5</Dropdown.Item>
+                                <Dropdown.Item href="#">Car 6</Dropdown.Item>
+                            </DropdownButton>
+                        </div>
+                        <button className="btn btn-block btn-primary" style={{ cursor: 'pointer' }} onClick={locationSubmit}>
+                            Click To Confirm
+                        </button>
+                    </Card>
+                </Col>
+            </Container>
         </main>
     )
 }

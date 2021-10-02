@@ -6,6 +6,9 @@ Kiddo Car Line is a web application that allows parent to inform the school when
 
 ## Description
 
+![KiddoCarLine](./images/screenshot1.jpg "KiddoCarLine")
+
+
 - The creation of this project was motivated by fixing a problem that started due to the Covid pandemic. More parents were driving their children to school instead of riding the bus.  This caused an abundance of car riders. To help speed up the car rider line this app allows the parents to notify the school when they have arrived and then the students can quickly be loaded into the cars.
 
 - We built this project to help schools and parents efficiently utilize a car rider line and get the families off to their next destination.

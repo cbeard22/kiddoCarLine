@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Kiddo Car Line
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Kiddo Car Line is a web application that allows parent to inform the school when they are here to pick up their child. 
 
-## Available Scripts
+[Live Site!]()
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+- The creation of this project was motivated by fixing a problem that started due to the Covid pandemic. More parents were driving their children to school instead of riding the bus.  This caused an abundance of car riders. To help speed up the car rider line this app allows the parents to notify the school when they have arrived and then the students can quickly be loaded into the cars.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- We built this project to help schools and parents efficiently utilize a car rider line and get the families off to their next destination.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- In working on this project, we learned how to collaborate as a group, compromise on ideas, resolve Git conflicts, and prioritize tasks for deadlines.
 
-### `npm test`
+## Table of Contents
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Provided that you have a code editor of your choosing installed on your system, such as VS Code (https://code.visualstudio.com/),
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Provided that you have a Terminal installed for Windows (https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab) or are using a Mac with Terminal installed with the OS,
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Provided you have Git and Github Desktop installed (https://git-scm.com/downloads, https://desktop.github.com/) and have registered for an account,
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Either Clone or Fork this repository: git clone (https://github.com/cbeard22/kiddocarline.git)
 
-### `npm run eject`
+5. Create your own repository for the files on GitHub.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. Edit to your liking and continue to commit, push changes and perform other Git actions using your repository (https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. Deploy this repo to heroku (https://id.heroku.com/login)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
+To utilize this page, simply create an account on the sign up page. Then login and select that you are here to pick up your child. Your childs name will then be loaded into the car rider line administration page where the teachers can display or dismiss students to go to the car rider line. Once the cars are full the admin can then clear the car rider lines and they can begin to enter new names. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Home Screen](Link to image)
+![Login Page](Link to image)
+![Admin Login Page](Link to image)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Credits
+- Collaborators
+  - [Jeff Severson:](https://github.com/jeffseverson2001)
+  - [Chris Beard:](https://github.com/cbeard22)
+  - [Mike Steinmetz:](https://github.com/mgsteinmetz)
+  - [Daniel Klauer:](https://github.com/danielkl12)
+  - [Derek Vangstad:](https://github.com/Dvangstad)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - For this project we utilized:
+  - React
+  - Node.js
+  - MongoDb
+  - Apollo
+  - React-Bootstrap
+  - JWT
 
-### Code Splitting
+- Tutorials Followed:
+[Professional README guide template provided by Coding Boot Camp.](https://github.com/coding-boot-camp)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
+- MIT License
 
-### Analyzing the Bundle Size
+- Copyright (c) [2021] [Jeff Severson ; Chris Beard; Mike Steinmetz; Daniel Klauer; Derek Vangstad]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Making a Progressive Web App
+- The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

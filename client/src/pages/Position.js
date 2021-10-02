@@ -1,15 +1,9 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { CREATE_LOCATION } from '../utils/mutations';
-//import Auth from '../utils/auth';
-
-//import { Form } from 'react-bootstrap';
 
 const userID = localStorage.getItem('id_user');
 
-
-//This page defines the position the cars are in after parent logs in.
 const Position = (props) => {
     const [createLocation, { error, data }] = useMutation(CREATE_LOCATION);
 
@@ -25,7 +19,6 @@ const Position = (props) => {
             console.error(e);
         }
     };
-
 
     return (
         <div className='location'>

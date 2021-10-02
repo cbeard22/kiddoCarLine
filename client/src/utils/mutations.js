@@ -1,6 +1,5 @@
 import gql from 'graphql-tag';
 
-
 export const LOGIN_USER = gql`
     mutation login($email: String!, $password: String!, $isAdmin: Boolean!) {
         login(email: $email, password: $password, isAdmin: $isAdmin) {
@@ -14,7 +13,6 @@ export const LOGIN_USER = gql`
         }
     }
 `;
-
 
 export const ADD_USER = gql`
     mutation createUser($parentOne: String!, $email: String!, $password: String!, $student: String) {
@@ -53,4 +51,3 @@ export const ADD_STUDENT = gql`
     }
   }
 `;
-

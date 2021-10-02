@@ -70,9 +70,6 @@ function App() {
               <Route exact path="/Position">
                 <Position />
               </Route>
-              <Route exact path="/AdminCarDisplay">
-                <AdminCarDisplay />
-              </Route>
             </div>
           </div>
         </div>

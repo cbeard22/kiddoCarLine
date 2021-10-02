@@ -18,13 +18,13 @@ class AdminCarDisplay extends Component {
                             <td>Position 1</td>
                             <td>Bob</td>
                             <td>Julie</td>
-                            
+
                         </tr>
                         <tr>
                             <td>Position 2</td>
                             <td>Tilda</td>
                             <td>Flamingo</td>
-                            
+
                         </tr>
                         <tr>
                             <td>Position 3</td>

@@ -2,7 +2,7 @@
 
 Kiddo Car Line is a web application that allows parent to inform the school when they are here to pick up their child. 
 
-[Live Site!]()
+[Live Site!](https://kiddocarline.herokuapp.com/)
 
 ## Description
 

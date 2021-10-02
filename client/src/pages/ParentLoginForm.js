@@ -6,6 +6,9 @@ import Auth from '../utils/auth';
 //import qrCode from './QrCode';
 import { Form, Container, Row, Col, Button, Card, FormGroup } from 'react-bootstrap';
 
+const userID = localStorage.getItem('id_user');
+console.log(userID);
+
 const ParentLoginForm = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '', isAdmin: false });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -29,12 +32,11 @@ const ParentLoginForm = (props) => {
         variables: { ...formState },
       });
 
-      console.log(data);
-      Auth.login(data.login.token);
-      
+      //console.log(data);
+      //console.log(data.login.user._id);
+      Auth.login(data.login.token, data.login.user._id);
 
     } catch (e) {
-      console.log("THIS ERROR J-HERE");
       console.error(e);
     }
 
@@ -56,7 +58,7 @@ const ParentLoginForm = (props) => {
           <Card.Body className="card-body">
             {Auth.loggedIn() ? (
               <p>
-                <Link to="./Position">Click to the check-in page.</Link>
+                <Link to="./Position">I am here for my child! --- PLF</Link>
               </p>
             ) : (
               <Form onSubmit={handleFormSubmit}>

@@ -64,6 +64,9 @@ function App() {
               <Route exact path="/AdminLoginForm">
                 <AdminLogin />
               </Route>
+              <Route exact path="/AdminCarDisplay">
+                <AdminCarDisplay />
+              </Route>
               <Route exact path="/Position">
                 <Position />
               </Route>

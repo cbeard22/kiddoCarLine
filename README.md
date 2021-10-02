@@ -50,19 +50,23 @@ To utilize this page, simply create an account on the sign up page. Then login a
 
 ## Credits
 - Collaborators
-  - [Jeff Severson:](https://github.com/jeffseverson2001)
-  - [Chris Beard:](https://github.com/cbeard22)
-  - [Mike Steinmetz:](https://github.com/mgsteinmetz)
-  - [Daniel Klauer:](https://github.com/danielkl12)
-  - [Derek Vangstad:](https://github.com/Dvangstad)
+  - [Jeff Severson](https://github.com/jeffseverson2001)
+  - [Chris Beard](https://github.com/cbeard22)
+  - [Mike Steinmetz](https://github.com/mgsteinmetz)
+  - [Daniel Klauer](https://github.com/danielkl12)
+  - [Derek Vangstad](https://github.com/Dvangstad)
 
   - For this project we utilized:
+  - Javascript
+  - GraphQL
   - React
+  - Mongoose ODM
+  - Heroku
   - Node.js
   - MongoDb
   - Apollo
   - React-Bootstrap
-  - JWT
+  - JWT Authentication
 
 - Tutorials Followed:
 [Professional README guide template provided by Coding Boot Camp.](https://github.com/coding-boot-camp)

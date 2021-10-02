@@ -58,7 +58,7 @@ const ParentLoginForm = (props) => {
           <Card.Body className="card-body">
             {Auth.loggedIn() ? (
               <p>
-                <Link to="./Position">Your Login is Still Vaild, Click here for my child!</Link>
+                <Link to="./Position">I am here for my child!</Link>
               </p>
             ) : (
               <Form onSubmit={handleFormSubmit}>

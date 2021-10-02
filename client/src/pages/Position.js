@@ -1,7 +1,6 @@
 import React from 'react';
 import { useMutation } from '@apollo/client';
 import { CREATE_LOCATION } from '../utils/mutations';
-import { Container, Col, Card} from 'react-bootstrap';
 
 import { Container, DropdownButton, Dropdown, Col, Card } from 'react-bootstrap';
 
